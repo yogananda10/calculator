@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=p!zl41gx&yc(51%m7f0dhktbh39h(4==ach_dm3aigg%ipcxm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -116,3 +116,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
