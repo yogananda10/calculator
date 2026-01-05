@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+
+    {% if error %}
+        <h2 style="color:red;">{{ error }}</h2>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Enter number 1:</label>
+        <input type="text" name="Num1" required>
+        <br><br>
+
+        <label>Enter number 2:</label>
+        <input type="text" name="Num2" required>
+        <br><br>
+
+        <label>Operation:</label>
+        <select name="choice">
+            <option value="1">Addition</option>
+            <option value="2">Subtraction</option>
+            <option value="3">Multiply</option>
+            <option value="4">Division</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result is not None %}
+        <h1>Result: {{ result }}</h1>
+    {% endif %}
+
+</body>
+</html>
